@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Item {}","map":{"version":3,"mappings":"AAAA,OAAM,MAAOA,IAAI","names":["Item"],"sourceRoot":"","sources":["D:\\AngulerServeces2\\ClientApp\\src\\app\\Classes\\Item.ts"],"sourcesContent":["export class Item {\n    name :string;\n    description:string;\n}"]},"metadata":{},"sourceType":"module","externalDependencies":[]}
