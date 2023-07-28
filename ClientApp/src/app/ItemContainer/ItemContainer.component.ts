@@ -14,6 +14,6 @@ export class ItemContainerComponent implements OnInit {
   outputvalue="";
   test ="this value from parent component";
   onFormSubmit(value:string){
-  this.outputvalue=value;
+  this.outputvalue=value
   }
 }
