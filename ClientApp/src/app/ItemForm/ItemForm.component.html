@@ -1,5 +1,6 @@
+<mat-label> This should Have A value from parent:{{testinput}}</mat-label>
 <form (ngSubmit)="onSubmit()">
-<div>
+<!-- <div>
   <label for="Name">Name</label>
   <input type="text" name="name" id="name" [(ngModel)]="item.name" required>
 </div>
@@ -11,6 +12,19 @@
    [(ngModel)]="item.description"
     required>
   </textarea>
-</div>
-<button type = "submit">Save</button> 
+</div> -->
+<mat-form-field class="example-full-width">
+    <mat-label> Enter Your Name</mat-label>
+    <input matInput placeholder="Name" name="name" id="name" [(ngModel)]="item.name" required="">
+    <mat-error >Please Enter That Name</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Description</mat-label>
+    <textarea matInput placeholder="Description" name="description"
+    id="description" [(ngModel)]="item.description"></textarea>
+  </mat-form-field>
+ 
+<button type = "submit" mat-button color="accent">Save</button> 
+
 </form>

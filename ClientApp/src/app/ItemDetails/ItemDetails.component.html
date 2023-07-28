@@ -11,7 +11,10 @@
       <td>{{item.name}}</td>
       <td>{{item.description}}</td>
       <td>
-        <button (click)="deleteItem(item.name)">Delete</button>
+        <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon"
+        (click)="deleteItem(item.name)" >
+        <mat-icon >delete</mat-icon>
+      </button>
       </td>
     </tr>
   </tbody>

@@ -5,17 +5,13 @@ import { Item } from './Classes/Item';
 providedIn: 'root'
 })
 export class ItemService {
-  getItems(): any {
-    throw new Error('Method not implemented.');
+  private items: Item[] = [];
+  getItems(): Item[] {
+    return this.items;
   }
-private items:Item[]=[];
-constructor() { }
-get item()
-{
-  return this.items;
-}
+
 getItem(name:string):Item{
-return this.items.find(item=> item.name===name)??new Item();
+return this.items.find(item=> item.name === name)??new Item();
 }
 addOrUpdateItem(item: Item): void {
   const index = this.items.findIndex(i => i.name === item.name);
@@ -29,7 +25,7 @@ private addItem(item:Item):void{
   this.items.push(item);
 }
 private updateItem(index: number, item: Item):void {
-    this.item[index]=item;
+    this.items[index]=item;
   }
   deleteItem(name:string):void{
     this.items =this.items.filter(item=>item.name !==name);

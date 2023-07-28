@@ -1,2 +1,5 @@
-<app-ItemForm></app-ItemForm>
+<app-ItemForm [testinput]="test"
+ (testoutput)="onFormSubmit($event)">
+</app-ItemForm>
+<span>{{outputvalue}}</span>
 <app-ItemDetails></app-ItemDetails>

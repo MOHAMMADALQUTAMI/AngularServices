@@ -8,14 +8,15 @@ import { Item } from '../Classes/Item';
   styleUrls: ['./ItemDetails.component.css']
 })
 export class ItemDetailsComponent implements OnInit {
-
+  items:Item[];
   constructor(private itemService:ItemService) { }
 
   ngOnInit(): void {
     this.refreshItems();
   }
-  items:Item[];
-  deleteItem(name:string){
+
+  
+deleteItem(name:string){
  this.itemService.deleteItem(name);
  this.refreshItems();
    }
